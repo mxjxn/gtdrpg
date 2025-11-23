@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import type {
   GameState,
-  Player,
   Quest,
   CharacterClass,
   Screen,
