@@ -1,0 +1,141 @@
+.goal-capture {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.capture-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.goal-capture h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.capture-form {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.capture-form input {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.capture-form input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.capture-form button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.capture-form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.capture-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quest-list {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.quest-list h3 {
+  margin-top: 0;
+  color: #667eea;
+  font-size: 1.2rem;
+}
+
+.quest-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quest-list li {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.2s;
+}
+
+.quest-list li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
+}
+
+.quest-icon {
+  font-size: 1.2rem;
+}
+
+.action-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.hint {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .capture-form input {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+
+  .quest-list {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .quest-list li {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .quest-list li:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}

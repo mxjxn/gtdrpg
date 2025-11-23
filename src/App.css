@@ -1,28 +1,27 @@
 .app {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  margin-bottom: 0.5em;
+/* Shared button styles */
+.btn-primary {
+  padding: 1.2rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-p {
-  font-size: 1.2em;
-  color: #888;
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
 }
 
-.ready {
-  margin-top: 2em;
-  font-size: 1.5em;
-  color: #667eea;
-  font-weight: bold;
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

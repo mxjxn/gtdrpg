@@ -1,0 +1,254 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.player-info h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.player-class {
+  margin: 0.3rem 0 0 0;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.player-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.stat-icon {
+  font-size: 1.8rem;
+}
+
+.xp-section {
+  margin-bottom: 3rem;
+}
+
+.xp-bar {
+  height: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+.xp-text {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.quest-section {
+  margin-bottom: 3rem;
+}
+
+.quest-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.quest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.quest-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.quest-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateY(-2px);
+}
+
+.quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.quest-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  flex: 1;
+}
+
+.quest-context {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.quest-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.quest-rewards {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.reward-item {
+  color: #888;
+}
+
+.btn-complete {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-complete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.completed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.completed-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  opacity: 0.7;
+}
+
+.check-icon {
+  font-size: 1.2rem;
+  color: #4ade80;
+}
+
+.completed-title {
+  flex: 1;
+  text-decoration: line-through;
+  color: #888;
+}
+
+.completed-xp {
+  color: #ffd700;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+details summary {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  user-select: none;
+}
+
+details summary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.someday-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.someday-item {
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  color: #888;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+@media (prefers-color-scheme: light) {
+  .quest-section h2,
+  .quest-header h3 {
+    color: #333;
+  }
+
+  .quest-item {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .quest-item:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  .completed-item,
+  .someday-item {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  details summary {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  details summary:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+}
