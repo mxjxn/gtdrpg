@@ -1,2 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-electron/
+
+# Environment
+.env
+.env.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Old ClojureScript build artifacts (keeping for reference)
 /resources/public/js/ui-out
 /resources/public/js/electron-dev
+resources/public/js/
+resources/main.js
+target/
+.lein-*
+.nrepl-port
